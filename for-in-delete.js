@@ -141,7 +141,14 @@ function secrets(obj) {
 */
 
 //Code Here
-
+function removePassword(obj) {
+  for(let key in obj){
+    if(key === "password"){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -161,7 +168,16 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
+function removeBig(obj) {
+  for(let key in obj){
+    if(obj[key]>100){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
+removeBig(deleteTheBigNumbers);
 
 ////////// PROBLEM 7 //////////
 
@@ -173,7 +189,14 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+function startsWithK(obj) {
+  for(let key in obj) {
+    if(key.startsWith("k")){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -188,5 +211,11 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+
+function hiddenTreasure(obj) {
+  for(let key in obj) {
+    
+  }
+}
 
 
